@@ -8,3 +8,32 @@ const productos = [
 
 // Array del carrito
 let carrito = [];
+
+// Menú de opciones para interactuar con el carrito
+function menu() {
+    let opcion;
+    do {
+        opcion = parseInt(prompt("Seleccione una opción:\n1. Agregar producto\n2. Mostrar carrito\n3. Vaciar carrito\n4. Salir"));
+        switch (opcion) {
+            case 1:
+                const productosDisponibles = mostrarProductos();
+                const idAgregar = parseInt(prompt(`${productosDisponibles}Ingrese el ID del producto a agregar:\n`));
+                agregarProducto(idAgregar);
+                break;
+            case 2:
+                mostrarCarrito();
+                break;
+            case 3:
+                vaciarCarrito();
+                break;
+            case 4:
+                console.log("Gracias por su compra");
+                break;
+            default:
+                console.log("Opción no válida");
+        }
+    } while (opcion !== 4);
+}
+
+// Inicia el menú
+menu();
