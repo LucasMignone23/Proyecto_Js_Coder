@@ -31,6 +31,25 @@ function agregarProducto(id) {
     }
 }
 
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    carrito = [];
+    console.log("El carrito ha sido vaciado");
+}
+
+// Función para mostrar el carrito
+function mostrarCarrito() {
+    if (carrito.length === 0) {
+        alert("El carrito está vacío");
+    } else {
+        let contenidoCarrito = "Contenido del carrito:\n";
+        carrito.forEach(producto => {
+            contenidoCarrito += `ID: ${producto.id}, Nombre: ${producto.nombre}, Precio: $${producto.precio}\n`;
+        });
+        alert(contenidoCarrito);
+    }
+}
+
 // Menú de opciones para interactuar con el carrito
 function menu() {
     let opcion;
