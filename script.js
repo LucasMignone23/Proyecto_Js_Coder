@@ -65,7 +65,7 @@ function mostrarCarrito() {
 function menu() {
     let opcion;
     do {
-        opcion = parseInt(prompt("Seleccione una opción:\n1. Agregar producto\n2. Mostrar carrito\n3. Vaciar carrito\n4. Salir"));
+        opcion = parseInt(prompt("Seleccione una opción:\n1. Agregar producto\n2. Mostrar carrito\n3. Vaciar carrito\n4. Eliminar produco\n5. Salir"));
         switch (opcion) {
             case 1:
                 const productosDisponibles = mostrarProductos();
