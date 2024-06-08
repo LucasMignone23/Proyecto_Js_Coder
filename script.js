@@ -31,6 +31,17 @@ function agregarProducto(id) {
     }
 }
 
+// Funcion para eliminar productos del carrito
+function eliminarProducto(id) {
+    const indice = carrito.findIndex(p => p.id === id); //findIndex encuentra el índice del primer elemento en un arreglo que cumpla una función de prueba proporcionada. Si ningún elemento satisface la función de prueba, retorna -1.
+    if (indice !== -1){
+    const productoEliminado = carrito.splice(indice, 1);
+    console.log(`Eliminado: ${productoEliminado[0].nombre}`);
+    }else{
+        console.log('Producto no encontrado en el carrito');
+    }
+}
+
 // Función para vaciar el carrito
 function vaciarCarrito() {
     carrito = [];
@@ -68,12 +79,16 @@ function menu() {
                 vaciarCarrito();
                 break;
             case 4:
+                const idEliminar = parseInt(prompt("Ingrese el ID del producto a eliminar:"));
+                eliminarProducto(idEliminar);
+                break;    
+            case 5:
                 console.log("Gracias por su compra");
                 break;
             default:
                 console.log("Opción no válida");
         }
-    } while (opcion !== 4);
+    } while (opcion !== 5);
 }
 
 // Inicia el menú
