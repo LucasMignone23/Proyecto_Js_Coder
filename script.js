@@ -79,6 +79,7 @@ function menu() {
                 vaciarCarrito();
                 break;
             case 4:
+                mostrarProductos();
                 const idEliminar = parseInt(prompt("Ingrese el ID del producto a eliminar:"));
                 eliminarProducto(idEliminar);
                 break;    
