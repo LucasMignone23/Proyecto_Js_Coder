@@ -3,93 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Entrega N°1</title>
+    <title>Document</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="encabezado">
-            <div class="logo"><img src="assets/Phina sin fondo.png" alt=""></div>
-            <div class="buscador">
-            </div>
-            <div class="acceso"> <a href="#">Crear cuenta </a> | <a href="#">Iniciar sesion</a><a href=""><img class="carrito" src="/assets/icons8-carrito-de-compras-50.png" alt=""></a></div>
+    <header class="encabezado">
+        <div class="logo"><img src="/assets/Phina sin fondo.png" alt="logo"></div>
+        <div class="buscador"></div>
+        <div class="inicio_carro">
+            <div class="inicio"><a href="#">Crear cuenta</a> | <a href="#">Iniciar sesion</a></div>
+            <div class="carro" id="carrito_nav"><img src="/assets/icons8-carrito-de-compras-30.png" alt=""></div>
         </div>
-        <nav class="navegacion">
-            <a href="#">Productos</a>
-            <a href="#">New In</a>
-            <a href="#">Informacion</a>
-            <a href="#">Contacto</a>
-            <a href="#">Preguntas frecuentes</a>
-            <a href="#">Politicas</a>
-        </nav>
     </header>
-    <section>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-        <div class="card">
-            <img src="/assets/Pantuflas.jpeg" alt="">
-            <p>item</p>
-            <div class="info">
-                <p>precio</p>
-                <img src="" alt="carrito">
-            </div>
-        </div>
-    </section>
+    <nav class="navegacion">
+        <a href="">Productos</a>
+        <a href="">New In</a>
+        <a href="">Informacion</a>
+        <a href="">Contacto</a>
+        <a href="">Preguntas frecuentes</a>
+        <a href="">Politicas</a>
+    </nav>
+    <main>
+        <section class="productos">
+            <div class="container"></div>
+        </section>
+        <aside id="cart" class="hidden">
+            <ul id="cart-items"></ul>
+            <button id="clear-cart">Vaciar carrito</button>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>Desarrolado por Lucas Mignone</p>
+    </footer>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
