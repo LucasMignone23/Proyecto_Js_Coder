@@ -1,0 +1,63 @@
+html {
+    background-color: #EAE2E2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos Header*/
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.encabezado .logo img{
+    width: 201px;
+}
+
+.encabezado .buscador {
+    margin-top: 50px;
+    background-color: #ECE6F0 ;
+    border-radius: 20px;
+    width: 662px;
+    height: 40px; 
+}
+
+
+.acceso .carrito{
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 20px;
+}
+
+/*Estilos navbar*/
+
+.navegacion{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Card */
+
+section {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+section .card {
+    height:400px;
+    width:100px;
+    justify-content: center;
+    align-items: center;
+    margin-left:  100px;
+}
