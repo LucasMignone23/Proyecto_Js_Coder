@@ -6,14 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearCartButton = document.getElementById('clear-cart');
     const productsContainer = document.querySelector('.productos .container');
 
-
-    //Guardar informacion el LocalStorage
+    // Guardar información en LocalStorage
     function saveCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-
-//Creacion de los items del carrito
+    // Creación de los items del carrito
     function renderCart() {
         cartItemsElement.innerHTML = '';
         cart.forEach(item => {
@@ -33,17 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsElement.appendChild(li);
         });
     }
-    
-    //Agregar al carrito
 
+    // Agregar al carrito
     function addToCart(id, name, price, img) {
         cart.push({ id, name, price, img });
         saveCart();
         renderCart();
     }
 
-    //Borrar item del carrito x ID
-
+    // Borrar item del carrito x ID
     function removeFromCart(id) {
         const index = cart.findIndex(item => item.id === id);
         if (index > -1) {
@@ -53,9 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //Creacion de las cards con los productos
-
-    function renderProducts() {
+    // Creación de las cards con los productos
+    function renderProducts(products) {
         productsContainer.innerHTML = '';
         products.forEach(product => {
             const card = document.createElement('div');
@@ -94,6 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Fetch de los productos desde el archivo JSON
+    fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+            renderProducts(products);
+        })
+        .catch(error => {
+            console.error('Error fetching products:', error);
+        });
+
     cartNavIcon.addEventListener('click', () => {
         cartElement.classList.toggle('hidden');
     });
@@ -105,5 +110,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderCart();
-    renderProducts();
 });
